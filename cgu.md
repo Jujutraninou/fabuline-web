@@ -55,7 +55,7 @@ L'Application permet :
 
 ### 4.2 Crédits et abonnements
 
-L'inscription ouvre droit à **5 crédits gratuits** permettant de découvrir le service.
+L'inscription ouvre droit à **4 crédits gratuits** permettant de découvrir le service.
 
 #### 4.2.1 Abonnements (formule principale)
 
@@ -78,7 +78,7 @@ Pour les abonnés, un mécanisme de fidélité ajoute des crédits mensuels supp
 - Tous les **6 points** cumulés, l'Utilisateur reçoit **+1 crédit supplémentaire** dans sa dotation mensuelle.
 - Le bonus est plafonné à **+4 crédits/mois pour Famille S** et **+12 crédits/mois pour Premium**.
 
-Les points sont **conservés** lors d'un changement de tier (S ↔ M). En cas d'annulation de l'abonnement, l'accumulation des points est suspendue. Si l'Utilisateur reprend un abonnement **dans les 60 jours** suivant l'annulation, ses points sont conservés ; au-delà de 60 jours, les points sont **remis à zéro**.
+Les points sont **conservés** lors d'un changement de tier (S ↔ Premium). En cas d'annulation de l'abonnement, l'accumulation des points est suspendue. Si l'Utilisateur reprend un abonnement **dans les 60 jours** suivant l'annulation, ses points sont conservés ; au-delà de 60 jours, les points sont **remis à zéro**.
 
 #### 4.2.3 Packs supplémentaires (consommables)
 
@@ -95,7 +95,7 @@ Pendant la phase de bêta privée, un Pack consommable est également proposé a
 
 - **4 crédits** — 3,99 € TTC.
 
-⚠ **Important** : ce Pack permet uniquement la génération d'histoires avec la **voix clonée** de l'Utilisateur. L'accès au catalogue d'histoires narrées en voix originale est réservé aux abonnés Famille S ou M.
+⚠ **Important** : ce Pack permet uniquement la génération d'histoires avec la **voix clonée** de l'Utilisateur. L'accès au catalogue d'histoires narrées en voix originale est réservé aux abonnés Famille S ou Premium.
 
 #### 4.2.5 Règles communes aux crédits
 
