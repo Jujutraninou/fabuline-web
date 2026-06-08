@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales — Fabuline</title>
+  <meta name="description" content="Mentions légales de l'application Fabuline : éditeur, hébergement, propriété intellectuelle.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="site">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="logo">F</span>
+        <span class="name">Fabuline</span>
+      </a>
+      <nav>
+        <a href="cgu.html">CGU</a>
+        <a href="privacy.html">Confidentialité</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <p class="loading">Chargement…</p>
+  </main>
+
+  <footer class="site">
+    © 2026 Fabuline ·
+    <a href="index.html">Accueil</a> ·
+    <a href="support.html">Support</a>
+  </footer>
+
+  <script>
+    fetch('mentions-legales.md')
+      .then(r => {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.text();
+      })
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(err => {
+        document.getElementById('content').innerHTML =
+          '<p class="loading">Erreur de chargement : ' + err.message + '</p>';
+      });
+  </script>
+</body>
+</html>

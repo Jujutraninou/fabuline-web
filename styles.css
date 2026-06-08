@@ -1,0 +1,263 @@
+/* Sprint 5.3 — Style commun pour les pages publiques Fabuline (index, CGU,
+   Privacy, Mentions, Support). Dark / Light automatique via
+   prefers-color-scheme. Typo Inter pour cohérence avec l'app Flutter. */
+
+:root {
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --surface-muted: #eef1f7;
+  --text-primary: #0f1423;
+  --text-secondary: #4a5470;
+  --accent: #e8a547;
+  --accent-deep: #d6932f;
+  --border: #e2e5ee;
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1020;
+    --surface: #161d33;
+    --surface-muted: #131a2d;
+    --text-primary: #e8eaf0;
+    --text-secondary: #8a93ab;
+    --accent: #f4b05e;
+    --accent-deep: #d99744;
+    --border: #232b45;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg);
+}
+
+/* En-tête de page */
+header.site {
+  padding: 24px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+header.site .container {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+header.site .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+header.site .brand .logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(232, 165, 71, 0.25);
+}
+header.site .brand .name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+header.site nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+header.site nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+header.site nav a:hover {
+  color: var(--accent);
+}
+
+/* Contenu principal */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+main h1, main h2, main h3, main h4 {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  letter-spacing: -0.3px;
+}
+main h1 { font-size: 32px; font-weight: 800; margin-top: 0; }
+main h2 { font-size: 22px; }
+main h3 { font-size: 18px; }
+main h4 { font-size: 15px; }
+
+main p, main li {
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+main a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+main ul, main ol {
+  padding-left: 24px;
+}
+
+main strong { color: var(--text-primary); font-weight: 700; }
+main em { font-style: italic; }
+
+main code {
+  background: var(--surface-muted);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "SF Mono", Consolas, Monaco, monospace;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+main blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 12px 16px;
+  margin: 16px 0;
+  background: var(--surface-muted);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+main hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+main th, main td {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+main th { background: var(--surface-muted); font-weight: 700; }
+
+/* Index — hero + cartes */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+.hero .logo-xl {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(232, 165, 71, 0.3);
+}
+.hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+}
+.hero .tagline {
+  color: var(--text-secondary);
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 0 28px;
+}
+
+.doc-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+.doc-card {
+  display: block;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: border-color 0.15s, transform 0.15s;
+}
+.doc-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.doc-card .icon {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.doc-card .title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.doc-card .subtitle {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+/* Loading state */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+footer.site {
+  border-top: 1px solid var(--border);
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+footer.site a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin: 0 8px;
+}
+footer.site a:hover { color: var(--accent); }
