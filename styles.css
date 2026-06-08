@@ -261,3 +261,168 @@ footer.site a {
   margin: 0 8px;
 }
 footer.site a:hover { color: var(--accent); }
+
+/* =====================================================================
+   LANDING PAGE (index) — Sprint vitrine
+   ===================================================================== */
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ---- Hero ---- */
+.hero-landing {
+  background:
+    radial-gradient(1100px 480px at 78% -8%, rgba(232,165,71,0.16), transparent 70%),
+    var(--bg);
+  padding: 64px 0 56px;
+  border-bottom: 1px solid var(--border);
+}
+.hero-landing .wrap {
+  display: grid; grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px; align-items: center;
+}
+.eyebrow {
+  text-transform: uppercase; letter-spacing: 1.2px; font-size: 12px;
+  font-weight: 800; color: var(--accent-deep); margin: 0 0 14px;
+}
+.hero-copy h1 {
+  font-size: 44px; line-height: 1.1; font-weight: 800;
+  letter-spacing: -0.8px; margin: 0 0 18px; color: var(--text-primary);
+}
+.hero-copy h1 .hl { color: var(--accent-deep); }
+.lede { font-size: 18px; color: var(--text-secondary); margin: 0 0 26px; max-width: 30em; }
+
+/* ---- Waitlist form ---- */
+.waitlist { display: flex; gap: 10px; max-width: 460px; flex-wrap: wrap; }
+.waitlist.center { margin: 0 auto; justify-content: center; }
+.waitlist input {
+  flex: 1 1 220px; min-width: 0; padding: 14px 16px; font-size: 15px;
+  border: 1px solid var(--border); border-radius: 12px;
+  background: var(--surface); color: var(--text-primary);
+}
+.waitlist input:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+.waitlist button {
+  padding: 14px 20px; font-size: 15px; font-weight: 700; cursor: pointer;
+  border: 0; border-radius: 12px; color: #fff; white-space: nowrap;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  box-shadow: 0 6px 18px rgba(232,165,71,0.32);
+  transition: transform .12s, box-shadow .12s;
+}
+.waitlist button:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(232,165,71,0.4); }
+.waitlist button:disabled { opacity: .6; cursor: default; transform: none; }
+.waitlist-msg { font-size: 13.5px; margin: 10px 2px 0; min-height: 1.2em; color: var(--text-secondary); }
+.waitlist-msg.ok { color: #1f9d5b; font-weight: 600; }
+.waitlist-msg.err { color: #d6483b; font-weight: 600; }
+
+/* ---- Store badges ---- */
+.stores { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+.store-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 9px 16px; border-radius: 12px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text-primary);
+}
+.store-badge.soon { opacity: .85; }
+.store-badge .store-ico {
+  width: 22px; height: 22px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+}
+.store-badge small { display: block; font-size: 10px; color: var(--text-secondary); line-height: 1; }
+.store-badge b { display: block; font-size: 15px; line-height: 1.2; }
+
+/* ---- Image placeholders (Gemini) ---- */
+.img-slot {
+  width: 100%; border: 2px dashed var(--border); border-radius: var(--radius);
+  background:
+    repeating-linear-gradient(45deg, var(--surface-muted), var(--surface-muted) 12px, var(--surface) 12px, var(--surface) 24px);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  color: var(--text-secondary); font-size: 13px; font-weight: 600; padding: 16px;
+}
+.img-slot.ratio-portrait { aspect-ratio: 4 / 5; }
+.img-slot.ratio-card { aspect-ratio: 4 / 3; }
+.img-slot img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit; }
+.img-slot:has(img) { border: none; background: none; padding: 0; overflow: hidden; }
+
+/* ---- Sections génériques ---- */
+.section-title { text-align: center; font-size: 30px; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 8px; }
+.section-sub { text-align: center; color: var(--text-secondary); margin: 0 auto 36px; max-width: 40em; }
+
+/* ---- Fonctionnalités ---- */
+.features { padding: 64px 0; }
+.features .section-title { margin-bottom: 44px; }
+.feature {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+  margin: 0 auto 56px; max-width: 940px;
+}
+.feature:last-child { margin-bottom: 0; }
+.feature.reverse .feature-text { order: 2; }
+.kicker { text-transform: uppercase; letter-spacing: 1px; font-size: 11.5px; font-weight: 800; color: var(--accent-deep); }
+.feature-text h3 { font-size: 25px; font-weight: 800; letter-spacing: -0.4px; margin: 8px 0 12px; }
+.feature-text p { font-size: 16px; color: var(--text-secondary); margin: 0; }
+
+/* ---- Comment ça marche ---- */
+.steps { background: var(--surface-muted); padding: 60px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 860px; margin: 0 auto; }
+.step { text-align: center; }
+.step-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 50%; font-weight: 800; font-size: 20px;
+  color: #fff; margin-bottom: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  box-shadow: 0 8px 20px rgba(232,165,71,0.3);
+}
+.step h4 { font-size: 17px; margin: 0 0 6px; }
+.step p { font-size: 14px; color: var(--text-secondary); margin: 0; }
+
+/* ---- Tarifs ---- */
+.pricing { padding: 64px 0; }
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 900px; margin: 0 auto; align-items: stretch; }
+.plan {
+  position: relative; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 24px; display: flex; flex-direction: column;
+}
+.plan.featured { border-color: var(--accent); box-shadow: 0 12px 32px rgba(232,165,71,0.18); }
+.plan h4 { font-size: 18px; margin: 0 0 6px; }
+.plan .price { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 16px; color: var(--text-primary); }
+.plan .price span { font-size: 15px; font-weight: 600; color: var(--text-secondary); }
+.plan ul { list-style: none; padding: 0; margin: 0; }
+.plan li { position: relative; padding-left: 24px; margin-bottom: 10px; font-size: 14.5px; color: var(--text-secondary); }
+.plan li::before { content: "✓"; position: absolute; left: 0; color: var(--accent-deep); font-weight: 800; }
+.badge-pop {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep)); color: #fff;
+  font-size: 11px; font-weight: 800; padding: 5px 14px; border-radius: 999px; white-space: nowrap;
+}
+.pricing-note { text-align: center; color: var(--text-secondary); font-size: 14px; margin-top: 22px; }
+
+/* ---- Confiance ---- */
+.trust { background: var(--surface-muted); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 34px 0; }
+.trust-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px 40px; }
+.trust-grid div { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; color: var(--text-primary); }
+.trust-ico { font-size: 20px; }
+
+/* ---- CTA final ---- */
+.final-cta {
+  text-align: center; padding: 66px 0;
+  background: radial-gradient(900px 380px at 50% 120%, rgba(232,165,71,0.16), transparent 70%), var(--bg);
+}
+.final-cta h2 { font-size: 28px; font-weight: 800; margin: 0 0 8px; }
+.final-cta > .wrap > p { color: var(--text-secondary); margin: 0 auto 24px; max-width: 34em; }
+
+/* ---- Responsive ---- */
+@media (max-width: 860px) {
+  .hero-landing .wrap { grid-template-columns: 1fr; gap: 32px; }
+  .hero-visual { order: -1; max-width: 360px; }
+  .hero-copy h1 { font-size: 36px; }
+  .feature { grid-template-columns: 1fr; gap: 18px; }
+  .feature.reverse .feature-text { order: 0; }
+  .feature .img-slot { max-width: 480px; }
+}
+@media (max-width: 600px) {
+  .steps-grid { grid-template-columns: 1fr; gap: 28px; }
+  .plans { grid-template-columns: 1fr; }
+  .plan.featured { order: -1; }
+  .hero-copy h1 { font-size: 31px; }
+  .waitlist button { flex: 1 1 100%; }
+}

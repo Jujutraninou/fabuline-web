@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fabuline — Vos voix, leurs histoires</title>
-  <meta name="description" content="Fabuline transforme les contes du patrimoine en expériences sonores personnalisées avec la voix des parents. Documents légaux et support.">
+  <title>Fabuline — Leurs histoires, racontées par votre voix</title>
+  <meta name="description" content="Fabuline transforme les contes du patrimoine en moments magiques : votre enfant entend ses histoires lues avec VOTRE voix, même quand vous n'êtes pas là.">
+  <meta property="og:title" content="Fabuline — Leurs histoires, racontées par votre voix">
+  <meta property="og:description" content="Des contes lus avec la voix clonée des parents. Conçu en France, données en Europe.">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,49 +18,220 @@
         <span class="name">Fabuline</span>
       </a>
       <nav>
-        <a href="cgu.html">CGU</a>
-        <a href="privacy.html">Confidentialité</a>
-        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#tarifs">Tarifs</a>
         <a href="support.html">Support</a>
       </nav>
     </div>
   </header>
 
-  <div class="hero">
-    <div class="logo-xl">H</div>
-    <h1>Fabuline</h1>
-    <p class="tagline">Vos voix, leurs histoires.</p>
-  </div>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero-landing">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Application d'histoires audio pour enfants</p>
+        <h1>Leurs histoires préférées,<br><span class="hl">racontées par votre voix.</span></h1>
+        <p class="lede">
+          Fabuline recrée votre voix pour lire les plus beaux contes du patrimoine.
+          Votre enfant s'endort bercé par <strong>maman ou papa</strong> — même les soirs où vous n'êtes pas là.
+        </p>
 
-  <div class="doc-cards">
-    <a href="cgu.html" class="doc-card">
-      <div class="icon">📜</div>
-      <div class="title">Conditions générales</div>
-      <div class="subtitle">Règles d'utilisation, abonnements, fidélité</div>
-    </a>
-    <a href="privacy.html" class="doc-card">
-      <div class="icon">🛡</div>
-      <div class="title">Politique de confidentialité</div>
-      <div class="subtitle">Données personnelles, RGPD, droits</div>
-    </a>
-    <a href="mentions-legales.html" class="doc-card">
-      <div class="icon">ℹ️</div>
-      <div class="title">Mentions légales</div>
-      <div class="subtitle">Éditeur, hébergement, propriété intellectuelle</div>
-    </a>
-    <a href="support.html" class="doc-card">
-      <div class="icon">✉️</div>
-      <div class="title">Support</div>
-      <div class="subtitle">Contact, aide, signaler un problème</div>
-    </a>
-  </div>
+        <form class="waitlist" id="waitlist-form" novalidate>
+          <label class="sr-only" for="wl-email">Votre email</label>
+          <input type="email" id="wl-email" name="email" placeholder="votre@email.fr" autocomplete="email" required>
+          <button type="submit">Prévenez-moi au lancement</button>
+        </form>
+        <p class="waitlist-msg" id="waitlist-msg" role="status" aria-live="polite"></p>
+
+        <div class="stores">
+          <span class="store-badge soon"><span class="store-ico"></span><span><small>Bientôt sur</small><b>App Store</b></span></span>
+          <span class="store-badge soon"><span class="store-ico"></span><span><small>Bientôt sur</small><b>Google Play</b></span></span>
+        </div>
+      </div>
+
+      <!-- IMAGE GEMINI — slot "hero" -->
+      <div class="hero-visual">
+        <div class="img-slot ratio-portrait" data-slot="hero">
+          <img src="assets/hero.png" alt="Un parent lit une histoire à son enfant au moment du coucher" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FONCTIONNALITÉS ===================== -->
+  <section id="fonctionnalites" class="features">
+    <div class="wrap">
+      <h2 class="section-title">Tout pour des histoires inoubliables</h2>
+
+      <article class="feature">
+        <div class="feature-text">
+          <span class="kicker">Le catalogue</span>
+          <h3>Des contes qui font grandir</h3>
+          <p>Fables, mythologie, classiques du patrimoine : un catalogue narré par une voix originale, pensé par tranche d'âge — de l'éveil aux grandes aventures.</p>
+        </div>
+        <div class="img-slot ratio-card" data-slot="catalogue"><img src="assets/catalogue.png" alt="Contes du patrimoine narrés, classés par tranche d'âge" loading="lazy"></div>
+      </article>
+
+      <article class="feature reverse">
+        <div class="feature-text">
+          <span class="kicker">La magie</span>
+          <h3>Votre voix, clonée avec amour</h3>
+          <p>Trente secondes d'enregistrement suffisent. L'IA recrée votre timbre pour lire n'importe quelle histoire du catalogue. <strong>Vos données restent en Europe</strong>, et l'IA ne garde aucun profil de votre voix.</p>
+        </div>
+        <div class="img-slot ratio-card" data-slot="voix"><img src="assets/voix.png" alt="La voix du parent recréée pour lire les histoires" loading="lazy"></div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <span class="kicker">Mes livres</span>
+          <h3>Vos propres histoires, page par page</h3>
+          <p>Enregistrez vos histoires maison, ajoutez vos photos, et composez de vrais livres audio illustrés. Le doudou, les vacances, le soir où… — vos souvenirs deviennent des histoires.</p>
+        </div>
+        <div class="img-slot ratio-card" data-slot="mes-livres"><img src="assets/mes-livres.png" alt="Créer ses propres livres audio illustrés, page par page" loading="lazy"></div>
+      </article>
+
+      <article class="feature reverse">
+        <div class="feature-text">
+          <span class="kicker">Les proches</span>
+          <h3>Toute la famille raconte</h3>
+          <p>Invitez grands-parents, parrains et marraines à enregistrer des histoires et à les offrir à vos enfants. La voix de Mamie au coucher, même à 600 km.</p>
+        </div>
+        <div class="img-slot ratio-card" data-slot="proches"><img src="assets/proches.png" alt="Grands-parents et proches enregistrent des histoires à distance" loading="lazy"></div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-text">
+          <span class="kicker">Le rituel du soir</span>
+          <h3>Pensé pour l'endormissement</h3>
+          <p>Minuteur de sommeil, mode sombre, écoute hors-ligne pour la chambre sans wifi, et un <strong>mode enfant sécurisé par biométrie</strong> : ils écoutent, vous gardez la main.</p>
+        </div>
+        <div class="img-slot ratio-card" data-slot="coucher"><img src="assets/coucher.png" alt="Le rituel du soir : minuteur de sommeil, mode sombre, endormissement" loading="lazy"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== COMMENT ÇA MARCHE ===================== -->
+  <section class="steps">
+    <div class="wrap">
+      <h2 class="section-title">Comment ça marche</h2>
+      <div class="steps-grid">
+        <div class="step"><span class="step-num">1</span><h4>Enregistrez votre voix</h4><p>~30 secondes, une seule fois.</p></div>
+        <div class="step"><span class="step-num">2</span><h4>Choisissez une histoire</h4><p>Dans le catalogue ou vos propres livres.</p></div>
+        <div class="step"><span class="step-num">3</span><h4>Ils l'écoutent, partout</h4><p>En ligne ou hors-ligne, au creux du lit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TARIFS ===================== -->
+  <section id="tarifs" class="pricing">
+    <div class="wrap">
+      <h2 class="section-title">Des formules simples</h2>
+      <p class="section-sub">Essai gratuit de 7 jours, sans engagement, résiliable à tout moment.</p>
+      <div class="plans">
+        <div class="plan">
+          <h4>Découverte</h4>
+          <p class="price">Gratuit</p>
+          <ul>
+            <li><strong>4 crédits offerts</strong> à l'inscription</li>
+            <li>Génération en voix clonée</li>
+            <li>Sans carte bancaire</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h4>Famille S</h4>
+          <p class="price">3,99 €<span>/mois</span></p>
+          <ul>
+            <li><strong>5 crédits</strong> par mois</li>
+            <li>Catalogue narré illimité</li>
+            <li>Fidélité à vie</li>
+          </ul>
+        </div>
+        <div class="plan featured">
+          <span class="badge-pop">Le plus complet</span>
+          <h4>Premium</h4>
+          <p class="price">8,99 €<span>/mois</span></p>
+          <ul>
+            <li><strong>15 crédits</strong> par mois</li>
+            <li>Catalogue + packs de crédits</li>
+            <li>Crédits proches inclus</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pricing-note">Premium aussi en annuel : <strong>80,90 €/an</strong> (3 mois offerts).</p>
+    </div>
+  </section>
+
+  <!-- ===================== CONFIANCE ===================== -->
+  <section class="trust">
+    <div class="wrap trust-grid">
+      <div><span class="trust-ico">🇫🇷</span><b>Conçu en France</b></div>
+      <div><span class="trust-ico">🇪🇺</span><b>Données hébergées en Europe</b></div>
+      <div><span class="trust-ico">🔒</span><b>Voix chiffrée &amp; supprimable</b></div>
+      <div><span class="trust-ico">🚫</span><b>Sans publicité</b></div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>Soyez prévenu·e dès l'ouverture</h2>
+      <p>Laissez votre email, on vous écrit le jour du lancement. Promis, pas de spam.</p>
+      <form class="waitlist center" id="waitlist-form-2" novalidate>
+        <label class="sr-only" for="wl-email-2">Votre email</label>
+        <input type="email" id="wl-email-2" name="email" placeholder="votre@email.fr" autocomplete="email" required>
+        <button type="submit">Rejoindre la liste</button>
+      </form>
+      <p class="waitlist-msg" id="waitlist-msg-2" role="status" aria-live="polite"></p>
+    </div>
+  </section>
 
   <footer class="site">
-    © 2026 Fabuline ·
+    © 2026 Fabuline — La Fabrique du Numérique ·
     <a href="cgu.html">CGU</a> ·
     <a href="privacy.html">Confidentialité</a> ·
     <a href="mentions-legales.html">Mentions légales</a> ·
     <a href="support.html">Support</a>
   </footer>
+
+  <script>
+    // Liste d'attente → Edge Function Supabase `join-waitlist`.
+    // (clé publique injectée au déploiement du back-end)
+    const WAITLIST_ENDPOINT = 'https://ynsgxhafuaxcpafcdhyp.supabase.co/functions/v1/join-waitlist';
+    const SUPABASE_PUBLISHABLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inluc2d4aGFmdWF4Y3BhZmNkaHlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwMDkxMjcsImV4cCI6MjA5MzU4NTEyN30.hMcOsxb3y-prNSZJbY0VEiky9RDWD2eHg0rCqRJz6Sw';
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function wireWaitlist(formId, msgId) {
+      const form = document.getElementById(formId);
+      const msg = document.getElementById(msgId);
+      if (!form) return;
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = form.querySelector('input[type=email]').value.trim();
+        if (!EMAIL_RE.test(email)) { msg.textContent = 'Hmm, cet email ne semble pas valide.'; msg.className = 'waitlist-msg err'; return; }
+        const btn = form.querySelector('button');
+        btn.disabled = true; msg.textContent = 'Un instant…'; msg.className = 'waitlist-msg';
+        try {
+          const res = await fetch(WAITLIST_ENDPOINT, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SUPABASE_PUBLISHABLE_KEY,
+              'Authorization': 'Bearer ' + SUPABASE_PUBLISHABLE_KEY
+            },
+            body: JSON.stringify({ email })
+          });
+          if (!res.ok) throw new Error('http ' + res.status);
+          form.reset();
+          msg.textContent = 'Merci ! On vous écrit au lancement. ✨';
+          msg.className = 'waitlist-msg ok';
+        } catch (_) {
+          msg.textContent = 'Oups, réessayez dans un instant.';
+          msg.className = 'waitlist-msg err';
+        } finally { btn.disabled = false; }
+      });
+    }
+    wireWaitlist('waitlist-form', 'waitlist-msg');
+    wireWaitlist('waitlist-form-2', 'waitlist-msg-2');
+  </script>
 </body>
 </html>
