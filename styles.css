@@ -66,15 +66,10 @@ header.site .brand {
 header.site .brand .logo {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 800;
-  font-size: 18px;
-  box-shadow: 0 4px 12px rgba(232, 165, 71, 0.25);
+  border-radius: 9px;
+  object-fit: cover;
+  background: transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 header.site .brand .name {
   font-size: 20px;
