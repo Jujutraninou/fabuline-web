@@ -25,6 +25,8 @@ L'utilisation de l'Application implique l'acceptation pleine et entière des pr�
 - **Crédit** : unité de consommation permettant la génération d'une histoire personnalisée. Le coût en crédits varie selon la longueur de l'histoire (entre 1 et 4 crédits par histoire).
 - **Histoire générée** : fichier audio résultant du clonage vocal d'une histoire du catalogue par l'Utilisateur.
 - **Catalogue** : ensemble des œuvres patrimoniales (du domaine public ou pour lesquelles l'Éditeur dispose des droits) disponibles à la personnalisation depuis l'Application.
+- **Mes livres** : livres audio que l'Utilisateur enregistre lui-même (sa propre voix, page par page), auxquels il peut ajouter une **photo de couverture** facultative.
+- **Proche** : personne (grand-parent, parrain, marraine, etc.) qu'un Utilisateur invite à rejoindre sa famille pour enregistrer et partager des histoires.
 
 ## 3. Inscription et accès au service
 
@@ -40,7 +42,7 @@ L'Utilisateur est responsable de la confidentialité de ses identifiants de conn
 
 ### 3.3 Profil enfant
 
-L'Application permet d'associer un ou plusieurs **profils enfants** au Compte (prénom + tranche d'âge uniquement). Aucune donnée d'identification précise de l'enfant (nom de famille, date de naissance, email, photo) n'est collectée. Le Compte est un Compte parental, l'enfant n'est pas Utilisateur direct au sens des présentes CGU.
+L'Application permet d'associer un ou plusieurs **profils enfants** au Compte (prénom + tranche d'âge uniquement). Aucune donnée d'identification précise de l'enfant (nom de famille, date de naissance, email) n'est collectée au titre du profil enfant. *(Seule image éventuelle : la photo de couverture facultative que le parent choisit d'ajouter à ses propres « Mes livres » — cf. article 4 bis, sous sa responsabilité.)* Le Compte est un Compte parental, l'enfant n'est pas Utilisateur direct au sens des présentes CGU.
 
 ## 4. Description du service
 
@@ -51,7 +53,9 @@ L'Application permet :
 - d'enregistrer une ou plusieurs Voix de référence (sa propre voix exclusivement) ;
 - de personnaliser des histoires du Catalogue avec ces Voix ;
 - d'écouter les Histoires générées (en ligne ou hors ligne après téléchargement) ;
-- d'exporter les Histoires générées au format audio pour un usage personnel.
+- d'exporter les Histoires générées au format audio pour un usage personnel ;
+- d'**enregistrer ses propres livres audio (« Mes livres »)**, page par page, avec une photo de couverture facultative ;
+- d'**inviter des Proches** à enregistrer et partager des histoires au sein de la famille.
 
 ### 4.2 Crédits et abonnements
 
@@ -118,6 +122,23 @@ Les tarifs et la composition des packs peuvent évoluer ; toute modification est
 L'Éditeur met en œuvre les meilleurs efforts pour assurer une disponibilité de l'Application en mode 24/7, sans toutefois garantir une disponibilité ininterrompue. L'Application repose sur des services tiers (notamment Mistral AI pour la génération vocale, Supabase pour l'authentification et la base de données, Cloudflare pour le stockage audio) dont les éventuelles indisponibilités peuvent affecter le service.
 
 L'Éditeur peut suspendre temporairement l'Application pour des raisons de maintenance, de mise à jour ou de force majeure, sans que cela ouvre droit à indemnité.
+
+## 4 bis. « Mes livres » & partage entre Proches
+
+### Contenus enregistrés par l'Utilisateur
+
+La fonctionnalité **« Mes livres »** permet à l'Utilisateur de créer ses propres livres audio en enregistrant sa voix, page par page, et d'y ajouter une **photo de couverture facultative**.
+
+L'Utilisateur **reste propriétaire** des contenus qu'il enregistre et en conserve l'entière responsabilité. Il s'engage notamment :
+
+- à **détenir les droits** sur ce qu'il enregistre et sur toute image qu'il ajoute — en particulier toute **photo représentant une personne, et a fortiori un enfant**, pour laquelle il garantit disposer de l'autorisation nécessaire en sa qualité de parent ou de titulaire de l'autorité parentale ;
+- à **ne pas y inclure de contenu illicite, haineux, violent ou manifestement inapproprié**.
+
+L'Éditeur n'exerce pas de contrôle a priori sur ces contenus, mais peut, en cas de signalement ou de manquement manifeste, **suspendre ou supprimer** le contenu ou le Compte concerné.
+
+### Partage entre Proches
+
+L'Utilisateur peut **inviter des Proches** (grands-parents, parrains, marraines…) à rejoindre sa famille pour enregistrer et partager des histoires. En partageant un contenu, l'Utilisateur consent à le rendre **accessible aux membres de la ou des familles destinataires** au sein de l'Application. Chacun peut, à tout moment, **cesser un partage** ou **quitter une famille** depuis l'Application.
 
 ## 5. Engagement biométrique de l'Utilisateur
 

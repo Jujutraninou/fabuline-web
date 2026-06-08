@@ -16,7 +16,7 @@ Elle est rédigée en application du Règlement (UE) 2016/679 du 27 avril 2016 d
 
 ## 2. Responsable de traitement
 
-**La Fabrique du Numérique**, société par actions simplifiée unipersonnelle, RCS **Paris 105 777 544**, siège social **61 rue de Lyon, 75012 Paris, France**, représentée par son Président **Julien Tran**.
+**La Fabrique du Numérique**, société par actions simplifiée unipersonnelle, RCS **Paris 105 777 544**, siège social **61 rue de Lyon, 75012 Paris, France**, représentée par son représentant légal.
 
 **Contact RGPD** : **contact@fabuline.fr** (un délégué à la protection des données pourra être désigné dès que les seuils légaux ou stratégiques le justifieront).
 
@@ -32,8 +32,10 @@ Elle est rédigée en application du Règlement (UE) 2016/679 du 27 avril 2016 d
 | Solde et historique des crédits | nombre de crédits, transactions de débit/crédit | Suivi de la consommation, support, comptabilité | Exécution du contrat / Obligations comptables | 10 ans (durée légale comptable) |
 | Données techniques | logs d'erreurs, métriques anonymisées (temps de réponse) | Amélioration et sécurité du service | Intérêt légitime | 13 mois maximum |
 | Achats intégrés | identifiant de transaction Apple/Google | Validation des achats, lutte contre la fraude | Exécution du contrat / Obligations comptables | 10 ans |
+| **« Mes livres » — audio** | enregistrements de la voix de l'Utilisateur lisant ses propres histoires (page par page) | Création et lecture de livres audio personnels | Exécution du contrat | Durée du Compte + 30 jours |
+| **« Mes livres » — photo de couverture** *(facultative)* | image choisie par l'Utilisateur comme couverture d'un livre, **pouvant représenter un enfant** | Illustrer la couverture du livre dans l'Application | **Consentement explicite** de l'Utilisateur, parent/titulaire de l'autorité parentale (Art. 6 §1 a) RGPD) | Durée du Compte + 30 jours |
 
-> **Aucune donnée d'identification précise de l'enfant** (nom de famille, date de naissance, photo, géolocalisation) n'est collectée. L'Application est conçue selon le principe de **minimisation** : seules les données strictement nécessaires sont traitées.
+> **Minimisation** : aucune donnée d'identification précise de l'enfant (nom de famille, date de naissance, géolocalisation) n'est collectée au titre du profil enfant. **Seule exception** : la **photo de couverture facultative** que le parent choisit librement d'ajouter à ses propres livres « Mes livres » peut représenter son enfant — elle est alors fournie **sous la responsabilité du parent et avec son consentement**, hébergée dans l'Union européenne (Cloudflare R2, Frankfurt), supprimable à tout moment, et jamais utilisée à d'autres fins.
 
 ## 4. Sous-traitants et destinataires des données
 
