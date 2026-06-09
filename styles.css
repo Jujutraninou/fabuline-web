@@ -417,7 +417,6 @@ footer.site a:hover { color: var(--accent); }
 @media (max-width: 600px) {
   .steps-grid { grid-template-columns: 1fr; gap: 28px; }
   .plans { grid-template-columns: 1fr; }
-  .plan.featured { order: -1; }
   .hero-copy h1 { font-size: 31px; }
   .waitlist button { flex: 1 1 100%; }
 }
