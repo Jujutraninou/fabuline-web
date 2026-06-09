@@ -370,7 +370,7 @@ footer.site a:hover { color: var(--accent); }
 }
 .step h4 { font-size: 17px; margin: 0 0 6px; }
 .step p { font-size: 14px; color: var(--text-secondary); margin: 0; }
-.flow-title { text-align: center; font-size: 18px; font-weight: 800; margin: 0 0 24px; color: var(--text-primary); }
+.flow-title { text-align: center; font-size: 23px; font-weight: 800; letter-spacing: -0.3px; margin: 0 0 26px; color: var(--text-primary); }
 .steps .steps-grid + .flow-title { margin-top: 46px; }
 
 /* ---- Tarifs ---- */
