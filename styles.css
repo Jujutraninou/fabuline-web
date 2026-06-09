@@ -2,30 +2,21 @@
    Privacy, Mentions, Support). Dark / Light automatique via
    prefers-color-scheme. Typo Inter pour cohérence avec l'app Flutter. */
 
+/* Thème sombre fixe (la version « pas en blanc ») — ne suit plus le
+   réglage jour/nuit du système. Pour réactiver le mode clair auto, voir
+   l'historique git (palette claire :root + @media prefers-color-scheme). */
 :root {
-  --bg: #f7f8fb;
-  --surface: #ffffff;
-  --surface-muted: #eef1f7;
-  --text-primary: #0f1423;
-  --text-secondary: #4a5470;
-  --accent: #e8a547;
-  --accent-deep: #d6932f;
-  --border: #e2e5ee;
+  color-scheme: dark;
+  --bg: #0b1020;
+  --surface: #161d33;
+  --surface-muted: #131a2d;
+  --text-primary: #e8eaf0;
+  --text-secondary: #8a93ab;
+  --accent: #f4b05e;
+  --accent-deep: #d99744;
+  --border: #232b45;
   --radius: 16px;
   --radius-sm: 10px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b1020;
-    --surface: #161d33;
-    --surface-muted: #131a2d;
-    --text-primary: #e8eaf0;
-    --text-secondary: #8a93ab;
-    --accent: #f4b05e;
-    --accent-deep: #d99744;
-    --border: #232b45;
-  }
 }
 
 * { box-sizing: border-box; }
