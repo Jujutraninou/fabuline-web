@@ -42,7 +42,7 @@ L'Utilisateur est responsable de la confidentialité de ses identifiants de conn
 
 ### 3.3 Profil enfant
 
-L'Application permet d'associer un ou plusieurs **profils enfants** au Compte (prénom + tranche d'âge uniquement). Aucune donnée d'identification précise de l'enfant (nom de famille, date de naissance, email) n'est collectée au titre du profil enfant. *(Seule image éventuelle : la photo de couverture facultative que le parent choisit d'ajouter à ses propres « Mes livres » — cf. article 4 bis, sous sa responsabilité.)* Le Compte est un Compte parental, l'enfant n'est pas Utilisateur direct au sens des présentes CGU.
+L'Application permet d'associer un ou plusieurs **profils enfants** au Compte (prénom + tranche d'âge uniquement). **Aucune photo de l'enfant** ni autre donnée d'identification (nom de famille, date de naissance, email) n'est collectée au titre du profil enfant. Le Compte est un Compte parental, l'enfant n'est pas Utilisateur direct au sens des présentes CGU.
 
 ## 4. Description du service
 
@@ -131,7 +131,7 @@ La fonctionnalité **« Mes livres »** permet à l'Utilisateur de créer ses pr
 
 L'Utilisateur **reste propriétaire** des contenus qu'il enregistre et en conserve l'entière responsabilité. Il s'engage notamment :
 
-- à **détenir les droits** sur ce qu'il enregistre et sur toute image qu'il ajoute — en particulier toute **photo représentant une personne, et a fortiori un enfant**, pour laquelle il garantit disposer de l'autorisation nécessaire en sa qualité de parent ou de titulaire de l'autorité parentale ;
+- à **détenir les droits** sur ce qu'il enregistre et sur toute **image de couverture** qu'il ajoute (typiquement la jaquette du livre) — et, s'il choisit d'y faire figurer une personne, à disposer de l'autorisation nécessaire ;
 - à **ne pas y inclure de contenu illicite, haineux, violent ou manifestement inapproprié**.
 
 L'Éditeur n'exerce pas de contrôle a priori sur ces contenus, mais peut, en cas de signalement ou de manquement manifeste, **suspendre ou supprimer** le contenu ou le Compte concerné.

@@ -33,9 +33,9 @@ Elle est rédigée en application du Règlement (UE) 2016/679 du 27 avril 2016 d
 | Données techniques | logs d'erreurs, métriques anonymisées (temps de réponse) | Amélioration et sécurité du service | Intérêt légitime | 13 mois maximum |
 | Achats intégrés | identifiant de transaction Apple/Google | Validation des achats, lutte contre la fraude | Exécution du contrat / Obligations comptables | 10 ans |
 | **« Mes livres » — audio** | enregistrements de la voix de l'Utilisateur lisant ses propres histoires (page par page) | Création et lecture de livres audio personnels | Exécution du contrat | Durée du Compte + 30 jours |
-| **« Mes livres » — photo de couverture** *(facultative)* | image choisie par l'Utilisateur comme couverture d'un livre, **pouvant représenter un enfant** | Illustrer la couverture du livre dans l'Application | **Consentement explicite** de l'Utilisateur, parent/titulaire de l'autorité parentale (Art. 6 §1 a) RGPD) | Durée du Compte + 30 jours |
+| **« Mes livres » — photo de couverture** *(facultative)* | image de couverture choisie par l'Utilisateur (typiquement la **jaquette du livre papier**) | Illustrer la couverture du livre dans l'Application | Exécution du contrat | Durée du Compte + 30 jours |
 
-> **Minimisation** : aucune donnée d'identification précise de l'enfant (nom de famille, date de naissance, géolocalisation) n'est collectée au titre du profil enfant. **Seule exception** : la **photo de couverture facultative** que le parent choisit librement d'ajouter à ses propres livres « Mes livres » peut représenter son enfant — elle est alors fournie **sous la responsabilité du parent et avec son consentement**, hébergée dans l'Union européenne (Cloudflare R2, Frankfurt), supprimable à tout moment, et jamais utilisée à d'autres fins.
+> **Minimisation** : le profil enfant ne contient **que le prénom et la tranche d'âge**. **Aucune photo de l'enfant** n'est demandée ni collectée, ni aucune autre donnée d'identification (nom de famille, date de naissance, géolocalisation). La **photo de couverture** facultative de « Mes livres » est destinée à la **jaquette du livre** ; l'Utilisateur reste seul responsable de toute image qu'il y ajoute (cf. CGU art. 4 bis). Toutes les données « Mes livres » sont hébergées dans l'Union européenne (Cloudflare R2, Frankfurt) et supprimables à tout moment.
 
 ## 4. Sous-traitants et destinataires des données
 
@@ -44,9 +44,10 @@ L'Éditeur fait appel à des prestataires techniques agissant en qualité de sou
 | Sous-traitant | Service rendu | Localisation | Catégories de données |
 |---|---|---|---|
 | **Supabase Inc.** | Authentification, base de données Postgres, fonctions serverless | Région UE (Frankfurt) | Compte, profils enfants, métadonnées voix, histoires générées, crédits |
-| **Cloudflare R2** | Stockage des fichiers audio (voix de référence + histoires générées) | Juridiction UE (Frankfurt) | Enregistrements audio biométriques, audio générés |
-| **Mistral AI** (société française) | Modèle de clonage vocal et génération de la parole | UE (France) | Voix de référence (transit uniquement, non stockée durablement chez Mistral — décision Sprint 1.5) |
-| **RevenueCat Inc.** *(à activer en Sprint 3)* | Gestion des abonnements et achats intégrés | États-Unis | Identifiants d'achat, état d'abonnement |
+| **Cloudflare R2** | Stockage des fichiers audio et images (voix de référence, histoires générées, « Mes livres » : audio + couverture) | Juridiction UE (Frankfurt) | Enregistrements audio, couvertures de livres |
+| **Mistral AI** (société française) | Clonage vocal et génération de la parole | UE (France) | Voix de référence **et texte de l'histoire personnalisée — incluant le prénom de l'enfant** (transit uniquement, non conservés durablement chez Mistral) |
+| **Google Cloud (Cloud Run)** | Traitement audio serveur des « Mes livres » et des histoires (réduction de bruit, assemblage des pages, mixage de la musique) | **Région UE (europe-west1, Belgique)** | Fichiers audio (voix enregistrée du parent) en transit pour traitement |
+| **RevenueCat Inc.** | Gestion des abonnements et achats intégrés | États-Unis | Identifiants d'achat, état d'abonnement |
 | **Apple Inc. / Google LLC** | Magasins d'applications, paiements intégrés, services d'authentification (Sign in with Apple / Sign in with Google) | États-Unis | Identifiant de compte plateforme, transactions |
 
 L'Éditeur communique cette répartition en toute transparence : si l'**hébergement principal des données est en Union européenne** (Supabase EU, Cloudflare EU, Mistral France), les services de paiement et de plateforme (Apple, Google, RevenueCat) impliquent par nature un traitement aux États-Unis. À ce titre, l'Éditeur s'appuie sur les **clauses contractuelles types (CCT)** approuvées par la Commission européenne et sur l'éventuelle adhésion de ces sous-traitants au cadre de protection des données UE-États-Unis (« EU-U.S. Data Privacy Framework »).
@@ -58,7 +59,8 @@ L'Éditeur ne vend ni ne loue aucune donnée personnelle à des tiers à des fin
 Les données vivent par défaut **en Union européenne** :
 
 - Authentification + base de données : Supabase, région Frankfurt (Allemagne)
-- Fichiers audio : Cloudflare R2, juridiction EU (Frankfurt)
+- Fichiers audio et images : Cloudflare R2, juridiction EU (Frankfurt)
+- Traitement audio serveur (« Mes livres », mixage) : Google Cloud Run, région europe-west1 (Belgique)
 - Inférence IA vocale : Mistral AI, France
 
 Les transferts hors UE sont limités aux fonctions de paiement et de plateforme (Apple, Google, RevenueCat — États-Unis), encadrés par les CCT et/ou le DPF.
@@ -127,7 +129,7 @@ L'Éditeur ne procède à **aucune décision automatisée** au sens de l'article
 
 ## 11. Mineurs
 
-L'Application est destinée à un usage **par des adultes**, avec des contenus à destination de leurs enfants. Le Compte est obligatoirement détenu par un majeur (cf. CGU Art. 3). Les profils enfants associés ne contiennent que le prénom et la tranche d'âge, sans aucune autre donnée d'identification.
+L'Application est destinée à un usage **par des adultes**, avec des contenus à destination de leurs enfants. Le Compte est obligatoirement détenu par un majeur (cf. CGU Art. 3). Les profils enfants associés ne contiennent que le prénom et la tranche d'âge, sans aucune autre donnée d'identification. Le **prénom** de l'enfant est uniquement inséré dans le texte de l'histoire transmis pour la synthèse vocale (Mistral AI, France) et n'est pas conservé par ce prestataire. **Aucune photo de l'enfant n'est demandée.** L'Éditeur s'efforce de suivre les recommandations de la CNIL relatives aux données des mineurs.
 
 L'usage par un mineur de l'Application sans autorisation parentale est interdit. Si l'Éditeur a connaissance qu'un Compte a été créé par un mineur sans cette autorisation, il procédera à la suppression du Compte concerné.
 
@@ -137,7 +139,17 @@ La présente politique peut être amenée à évoluer (nouvelles fonctionnalité
 
 L'historique des versions est conservé et consultable sur demande.
 
-## 13. Contact
+## 13. Liste d'attente (site web fabuline.fr)
+
+Avant le lancement de l'Application, le site **fabuline.fr** propose un formulaire de **liste d'attente**. Si vous y laissez votre adresse email :
+
+- **Finalité** : vous prévenir de l'ouverture de l'Application.
+- **Base légale** : votre **consentement** (Art. 6 §1 a) RGPD), donné en soumettant le formulaire.
+- **Hébergement / destinataire** : Supabase (Union européenne, Frankfurt). Aucune cession à des tiers, aucune autre utilisation.
+- **Conservation** : jusqu'au lancement, puis 12 mois maximum — ou jusqu'à votre demande de retrait.
+- **Vos droits** : retrait du consentement et suppression à tout moment à **contact@fabuline.fr**.
+
+## 14. Contact
 
 Pour toute question relative à la présente politique :
 

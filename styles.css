@@ -373,6 +373,11 @@ footer.site a:hover { color: var(--accent); }
 .flow-title { text-align: center; font-size: 23px; font-weight: 800; letter-spacing: -0.3px; margin: 0 0 26px; color: var(--text-primary); }
 .steps .steps-grid + .flow-title { margin-top: 46px; }
 
+/* ---- Notice waitlist (RGPD) ---- */
+.waitlist-note { font-size: 12px; line-height: 1.5; color: var(--text-secondary); margin: 10px 0 0; max-width: 40em; opacity: 0.85; }
+.waitlist-note a { color: inherit; text-decoration: underline; }
+.final-cta .waitlist-note { margin-left: auto; margin-right: auto; }
+
 /* ---- Tarifs ---- */
 .pricing { padding: 64px 0; }
 .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 900px; margin: 0 auto; align-items: stretch; }
